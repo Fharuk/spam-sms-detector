@@ -1,5 +1,5 @@
 import streamlit as st
-import pickle
+import joblib
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -17,7 +17,7 @@ st.set_page_config(page_title="Spam SMS Classifier", page_icon="📩", layout="w
 # Load pipeline
 # ==============================
 with open("spam_classifier_pipeline.pkl", "rb") as f:
-    pipeline = pickle.load(f)
+    pipeline = joblib.load("spam_classifier_pipeline.pkl")
 
 
 
